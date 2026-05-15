@@ -1,0 +1,4 @@
+torch>=2.5
+torchvision>=0.20
+pillow>=10.0
+pyyaml>=6.0

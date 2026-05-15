@@ -1,0 +1,94 @@
+{
+  "config": {
+    "name": "baseline",
+    "data_dir": "cityscapes",
+    "image_size": 256,
+    "batch_size": 4,
+    "epochs": 3,
+    "num_workers": 0,
+    "learning_rate": 0.0002,
+    "beta1": 0.5,
+    "lambda_l1": 100.0,
+    "train_ratio": 0.7,
+    "val_ratio": 0.15,
+    "seed": 42,
+    "augment": false,
+    "crop_margin": 0,
+    "gan_mode": "bce",
+    "generator_base_channels": 64,
+    "discriminator_base_channels": 64,
+    "residual_blocks": 0,
+    "save_every": 1,
+    "max_train_batches": null,
+    "max_eval_batches": null,
+    "mixed_precision": true
+  },
+  "device": "cuda",
+  "split_sizes": {
+    "train": 350,
+    "val": 75,
+    "test": 75
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "train": {
+        "d_total": 0.460034790025516,
+        "g_total": 36.334163492376156,
+        "g_gan": 1.0926811728965153,
+        "g_l1": 0.35241482356055215
+      },
+      "val": {
+        "g_total": 24.094954540855007,
+        "g_gan": 1.0313539254037958,
+        "g_l1": 0.23063600926022781,
+        "mae": 0.23063600926022781,
+        "psnr": 15.747149567855033,
+        "ssim": 0.5654242744571284
+      }
+    },
+    {
+      "epoch": 2,
+      "train": {
+        "d_total": 0.2806871341202747,
+        "g_total": 23.33403137597171,
+        "g_gan": 1.7903237940574235,
+        "g_l1": 0.2154370764778419
+      },
+      "val": {
+        "g_total": 21.539954034905683,
+        "g_gan": 0.9378532641812375,
+        "g_l1": 0.2060210069543437,
+        "mae": 0.2060210069543437,
+        "psnr": 16.719707087466592,
+        "ssim": 0.5950596332550049
+      }
+    },
+    {
+      "epoch": 3,
+      "train": {
+        "d_total": 0.3263514854691245,
+        "g_total": 22.032318061048333,
+        "g_gan": 1.767962116070769,
+        "g_l1": 0.20264355939897624
+      },
+      "val": {
+        "g_total": 21.65445227372019,
+        "g_gan": 1.3194123757512946,
+        "g_l1": 0.203350399669848,
+        "mae": 0.203350399669848,
+        "psnr": 16.679117102372018,
+        "ssim": 0.5951949405042749
+      }
+    }
+  ],
+  "test": {
+    "g_total": 21.31110823781867,
+    "g_gan": 1.2523253340470164,
+    "g_l1": 0.200587828692637,
+    "mae": 0.200587828692637,
+    "psnr": 17.048267866435804,
+    "ssim": 0.6022620954011616
+  },
+  "training_minutes": 0.47
+}

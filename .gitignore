@@ -1,0 +1,37 @@
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Local data/cache
+/data/
+
+# Keep only a few dataset sample images in git
+cityscapes/*.jpg
+!cityscapes/image_001.jpg
+!cityscapes/image_002.jpg
+!cityscapes/image_003.jpg
+
+# Heavy training artifacts not needed for publication
+runs/**/latest.pt
+runs/**/best.pt
+runs/final_check_baseline/
+runs/final_check_improved/
+runs/smoke_baseline/
+
+# Local test outputs
+outputs/*.png
+!outputs/image_001_baseline.png
+!outputs/image_001_improved.png
+!outputs/image_001_pred.png
+!outputs/label_only_image_001.png
+outputs/test_*.png
+outputs/demo_*_check.png
+
+# Temporary notes and local docs
+project_extracted.txt
+project.pdf
